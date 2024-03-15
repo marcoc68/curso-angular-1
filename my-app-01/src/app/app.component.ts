@@ -11,12 +11,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  language: string = 'Telugu'; 
+  language       : string   = 'Telugu'; 
   listOfLanguages: string[] = ['English', 'Hindi', 'Spanish'];
 
   addLanguage(){
     console.log("addLanguage() called!");
     this.listOfLanguages.push(this.language);
     console.log(this.listOfLanguages);
+  }
+
+  deleteFirst(){
+    this.listOfLanguages.splice(0,1)
   }
 }  
